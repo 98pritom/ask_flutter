@@ -12,33 +12,61 @@ class ReplyScreen extends StatelessWidget {
         backgroundColor: Theme.of(context).colorScheme.inverseSurface,
         title: const Text('data'),
       ),
-      body: const Padding(
-        padding: EdgeInsets.all(16.0),
+      body: Padding(
+        padding: const EdgeInsets.all(16.0),
         child: Column(
           children: [
-            CardWidget(),
-            SizedBox(
+            const CardWidget(),
+            const SizedBox(
               height: 10,
             ),
-            Divider(
+            const Divider(
               color: Colors.grey,
             ),
-            CommentTile(
-              username: 'Heart_beat',
-              timeAgo: '3h ago',
-              likeCount: 255,
-              profilePicture:
-                  'https://buffer.com/library/content/images/size/w1200/2023/10/free-images.jpg',
-            ),
-            SizedBox(
-              height: 10,
-            ),
-            CommentTile(
-              username: 'Heart_beat',
-              timeAgo: '3h ago',
-              likeCount: 255,
-              profilePicture:
-                  'https://buffer.com/library/content/images/size/w1200/2023/10/free-images.jpg',
+            Expanded(
+              child: ListView(
+                shrinkWrap: true,
+                scrollDirection: Axis.vertical,
+                children: [
+                  CommentTile(
+                    username: 'Heart_beat',
+                    timeAgo: '3h ago',
+                    likeCount: 255,
+                    profilePicture:
+                        'https://buffer.com/library/content/images/size/w1200/2023/10/free-images.jpg',
+                  ),
+                  const SizedBox(
+                    height: 10,
+                  ),
+                  const CommentTile(
+                    username: 'Heart_beat',
+                    timeAgo: '3h ago',
+                    likeCount: 255,
+                    profilePicture:
+                        'https://buffer.com/library/content/images/size/w1200/2023/10/free-images.jpg',
+                  ),
+                  const SizedBox(
+                    height: 10,
+                  ),
+                  const CommentTile(
+                    username: 'Heart_beat',
+                    timeAgo: '3h ago',
+                    likeCount: 255,
+                    profilePicture:
+                        'https://buffer.com/library/content/images/size/w1200/2023/10/free-images.jpg',
+                  ),
+                  const SizedBox(
+                    height: 10,
+                  ),
+                  const CommentTile(
+                    username: 'Heart_beat',
+                    timeAgo: '3h ago',
+                    likeCount: 255,
+                    profilePicture:
+                        'https://buffer.com/library/content/images/size/w1200/2023/10/free-images.jpg',
+                  ),
+                ],
+              ),
             ),
           ],
         ),
